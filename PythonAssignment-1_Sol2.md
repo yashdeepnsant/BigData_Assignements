@@ -601,6 +601,21 @@ Q96. Write a python program to print below pattern.
 * * * 
 * * * * 
 * * * * * 
+
+Ans: num='*'
+ for i in range(0,5):
+     num='*'
+     for j in range(0,i+1):
+         print(num, end=" ")
+         num = num * 1
+     print("\r")
+
+or 
+n = 5
+for j in range(1,n+1):
+    print("* " * j)
+
+
 Q97. Write a python program to print below pattern.
 
     *
@@ -608,6 +623,35 @@ Q97. Write a python program to print below pattern.
   ***
  ****
 *****
+
+Ans:
+
+def pypart2(n):
+    k = 2*n - 2
+ 
+    # outer loop to handle number of rows
+    for i in range(0, n):
+     
+        # inner loop to handle number spaces
+        # values changing acc. to requirement
+        for j in range(0, k):
+            print(end=" ")
+     
+        # decrementing k after each loop
+        k = k - 2
+     
+        # inner loop to handle number of columns
+        # values changing acc. to outer loop
+        for j in range(0, i+1):
+         
+            # printing stars
+            print("* ", end="")
+     
+        # ending line after each row
+        print("\r")
+n = 5
+pypart2(n)
+
 Q98. Write a python program to print below pattern.
 
     * 
@@ -622,6 +666,17 @@ Q99. Write a python program to print below pattern.
 1 2 3 
 1 2 3 4 
 1 2 3 4 5
+
+Ans:
+num=1
+for i in range(0,5):
+    num = 1
+    for j in range(0,i+1):
+        print(num, end=" ")
+        num = num + 1
+    print("\r")
+
+
 Q100. Write a python program to print below pattern.
 
 A 
